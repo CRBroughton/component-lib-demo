@@ -1,3 +1,15 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const input = ref('')
+</script>
+
 <template>
-  <VInput />
+  <VInput v-model="input" />
+
+  <p>Value you typed: {{ input }}</p>
 </template>
+
+<style scoped>
+
+</style>

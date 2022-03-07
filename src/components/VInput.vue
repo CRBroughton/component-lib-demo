@@ -1,10 +1,29 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 
+interface Emits {
+  (e: 'update:modelValue', value: string): void
+}
+const emit = defineEmits<Emits>()
+
+interface Props {
+  modelValue: string
+}
+const props = defineProps<Props>()
+
+const value = computed({
+  get() {
+    return props.modelValue
+  },
+  set(value: string) {
+    emit('update:modelValue', value)
+  },
+})
 </script>
 
 <template>
   <div>
-    <input type="text" placeholder="Type here...">
+    <input v-model="value" type="text" placeholder="Type here...">
   </div>
 </template>
 
@@ -12,10 +31,10 @@
 input {
     width: 100%;
     padding: 10px;
-    border: 1px solid hsl(0, 0%, 75%);
+    border: 2px solid hsl(0, 0%, 75%);
     border-radius: 5px;
     &:focus {
-        border: 1px solid hsl(266, 83%, 68%);
+        border: 2px solid hsl(189, 85%, 70%);
         outline:none;
     }
     &:disabled {
