@@ -44,7 +44,7 @@ const classes = computed(() => ({
 .my-button {
     border: none;
     background: hsl(189, 85%, 70%);
-    border-radius: 5%;
+    border-radius: 5px;
     &:hover {
       text-decoration: underline;
     }
