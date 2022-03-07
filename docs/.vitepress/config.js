@@ -1,15 +1,15 @@
 const path = require('path')
 
 module.exports = {
-  title: 'My Lib',
+  title: 'Component Library Demo',
   description: 'Just playing around.',
   themeConfig: {
-    repo: 'https://github.com/wuruoyun/vue-component-lib-starter',
+    repo: 'https://github.com/CRBroughton/component-lib-demo',
     sidebar: [
       {
         text: 'Introduction',
         children: [
-          { text: 'What is My Lib?', link: '/' },
+          { text: 'What is a Component Library?', link: '/' },
           { text: 'Getting Started', link: '/guide/' },
         ],
       }, {

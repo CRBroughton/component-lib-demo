@@ -1,8 +1,5 @@
-# What is My Lib?
+# What is a Component Library?
 
-This library is a starter to create your own Vue 3 component library in TypeScript.
+A component library is a collection of cohesively designed, individually created blocks of code, which are then used to created complex pages and applications.
 
-There are two example components included for you to get started with creating your own components:
-
-- [ComponentA](/components/component-a) is a simple Hello World component with icon from bundled font file.
-- [ComponentB](/components/component-b) is a counter component using button from [PrimeVue](https://www.primefaces.org/primevue/), icons from [PrimeIcons](https://www.primefaces.org/showcase/icons.xhtml) and styling from [PrimeFlex](https://www.primefaces.org/primeflex/).
+Creating a component library gives developers access to reliable, tested and repeatable code, which eliminates code duplication, encourages documentation and speeds up application development.
