@@ -2,6 +2,8 @@
 
 # Vue Component Library Starter
 
+> Thanks to [Ruoyun Wu](https://github.com/wuruoyun/vue-component-lib-starter) for this starter template.
+
 > Create your own [Vue 3](https://v3.vuejs.org/) component library with TypeScript, [Vite](https://vitejs.dev) and [VitePress](https://vitepress.vuejs.org/).
 
 Sooner or later, you will find that creating a component library is much better than having all components inside your app project. A component library force to you remove app specific logic from your components, making it easier to test and reuse them in other apps.
