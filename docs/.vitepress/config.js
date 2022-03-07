@@ -16,6 +16,7 @@ module.exports = {
         text: 'Components',
         children: [
           { text: 'VButton', link: '/components/vbutton' },
+          { text: 'VInput', link: '/components/vinput' },
         ],
       }
     ],
