@@ -17,6 +17,11 @@ input {
         border: 1px solid hsl(266, 83%, 68%);
         outline:none;
     }
+    &:disabled {
+      background: hsl(0, 0%, 93%);
+      cursor: not-allowed;
+      pointer-events: none;
+    }
 }
 
 </style>
