@@ -13,3 +13,5 @@ This is a simple input component. The input uses two way data binding to print t
 <DemoContainer>
   <VInput/>
 </DemoContainer>
+
+<<< @/components/demo/VInput/Preview.vue

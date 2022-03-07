@@ -6,10 +6,5 @@ const input = ref('')
 
 <template>
   <VInput v-model="input" />
-
   <p>Value you typed: {{ input }}</p>
 </template>
-
-<style scoped>
-
-</style>
