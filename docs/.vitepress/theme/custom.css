@@ -1,0 +1,8 @@
+.container {
+  max-width: 60em !important;
+}
+.demo-container {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
