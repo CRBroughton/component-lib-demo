@@ -5,8 +5,7 @@ import VInput from './demo/VInput/Preview.vue'
 
 # VButton
 
-This is a simple button component. By default, the button is shown in the light blue colour.
-
+This is a simple input component. The input uses two way data binding to print the input to the page.
 ## Example Usage
 
 ### VInput
