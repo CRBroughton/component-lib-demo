@@ -13,6 +13,7 @@ input {
     width: 100%;
     padding: 10px;
     border: 1px solid hsl(0, 0%, 75%);
+    border-radius: 5px;
     &:focus {
         border: 1px solid hsl(266, 83%, 68%);
         outline:none;
