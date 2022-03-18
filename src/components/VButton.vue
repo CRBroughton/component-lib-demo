@@ -60,7 +60,8 @@ const classes = computed(() => ({
       box-shadow: 0px 1px 0px hsl(0, 0%, 70%);
     }
     &:active {
-       background: hsl(226, 82%, 69%);
+      background: hsl(226, 82%, 69%);
+      border: 1px solid hsl(226, 82%, 69%);
     }
     &.primary {
 
