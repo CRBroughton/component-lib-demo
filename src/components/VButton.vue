@@ -43,24 +43,35 @@ const classes = computed(() => ({
 <style scoped lang="scss">
 .my-button {
     border: none;
-    background: white;
-    border: 2px solid hsl(189, 85%, 70%);
-    border-radius: 5px;
+    background: hsl(226, 83%, 61%);
+    border: 1px solid hsl(226, 83%, 61%);
+    box-shadow: 0px 3px 0px hsl(226, 73%, 68%);
+    color: white;
+    border-radius: 12px;
+    position: relative;
+    transition: all ease 0.1s;
     &:hover {
-      text-decoration: underline;
+      border: 1px solid hsl(0, 0%, 70%);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    &:hover:active {
+      transform: translateY(4px);
+      box-shadow: 0px 1px 0px hsl(0, 0%, 70%);
     }
     &:active {
-       background: hsl(189, 89%, 83%);
+       background: hsl(226, 82%, 69%);
     }
     &.primary {
 
-         border: 2px solid hsl(120, 81%, 68%);
+         background: hsl(120, 81%, 68%);
+         color: black;
         &:active {
             background: hsl(120, 85%, 70%);
         }
     }
     &.warning {
-        border: 2px solid hsl(0, 80%, 68%);
+        background: hsl(0, 80%, 68%);
         &:active {
             background: hsl(0, 85%, 70%);
         }
