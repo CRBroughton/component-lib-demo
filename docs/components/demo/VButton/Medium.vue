@@ -1,6 +1,6 @@
 <template>
   <VButton
-    primary
+    secondary
     text="This is a button!"
   />
 </template>
