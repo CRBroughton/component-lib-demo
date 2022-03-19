@@ -19,7 +19,7 @@ This is a simple button component. By default, the button is shown in the light 
 
 <<< @/components/demo/VButton/Small.vue
 
-### Medium Button - Using Primary Prop
+### Medium Button - Using Secondary Prop
 
 <DemoContainer>
   <Medium/>
