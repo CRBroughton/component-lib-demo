@@ -2,6 +2,8 @@ import { mount } from '@vue/test-utils'
 import type { StyleValue } from 'vue'
 import VButton from '../components/VButton.vue'
 
+// type StyleValue = string | CSSProperties | Array<StyleValue>
+
 type Style = Record<string, StyleValue>
 
 type Size = 'small' | 'medium' | 'large'
@@ -17,9 +19,7 @@ interface Props {
 
 const bootstrap = (props: Props) => {
   return mount(VButton, {
-    props: props as Object,
-    // Without 'as any' or better, 'as Object',
-    // can cause vue-tsc to fail as it is expecting an Object
+    props,
   })
 }
 
