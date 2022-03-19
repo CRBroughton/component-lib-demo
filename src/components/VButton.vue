@@ -7,7 +7,7 @@ type Style = Record<string, StyleValue>
 type Size = 'small' | 'medium' | 'large'
 
 interface Props {
-  primary?: boolean
+  secondary?: boolean
   warning?: boolean
   class?: string
   style?: Style
@@ -15,14 +15,20 @@ interface Props {
   text?: string
 }
 
+interface Emits {
+  (e: 'click'): void
+}
+
 const props = defineProps<Props>()
 
-// eslint-disable-next-line no-console
-const clicked = () => { console.log('You clicked me!') }
+const emit = defineEmits<Emits>()
+
+// const clicked = (event: Event) => emit('click', (event.target as HTMLInputElement).innerHTML)
+const clicked = () => emit('click')
 
 const classes = computed(() => ({
-  primary: props.primary,
-  warning: !props.primary && props.warning,
+  secondary: props.secondary,
+  warning: !props.secondary && props.warning,
   [`button-${props.size || 'medium'}`]: true,
 }))
 </script>
@@ -43,36 +49,44 @@ const classes = computed(() => ({
 <style scoped lang="scss">
 .my-button {
     border: none;
-    background: hsl(226, 83%, 61%);
-    border: 1px solid hsl(226, 83%, 61%);
-    box-shadow: 0px 3px 0px hsl(226, 73%, 68%);
+    background: hsl(246, 84%, 58%);
+    border: 1px solid hsl(246, 84%, 58%);
+    box-shadow: 1px 1px 2px hsl(246, 80%, 70%);
     color: white;
-    border-radius: 12px;
+    text-decoration: none;
+    border-radius: 28px;
     position: relative;
+    cursor: pointer;
     transition: all ease 0.1s;
+    top: 0;
     &:hover {
-      border: 1px solid hsl(0, 0%, 70%);
-      text-decoration: none;
-      cursor: pointer;
-    }
-    &:hover:active {
-      transform: translateY(4px);
-      box-shadow: 0px 1px 0px hsl(0, 0%, 70%);
+      outline: 1px solid hsl(226, 75%, 70%);
+      box-shadow: 1px 3px 4px hsl(246, 37%, 52%);
+      top: -1px;
     }
     &:active {
-      background: hsl(226, 82%, 69%);
-      border: 1px solid hsl(226, 82%, 69%);
+      box-shadow: inset 1px 3px 1px #333;
+      top: 1px;
+      background: hsl(246, 84%, 62%);
+      outline: 1px solid hsl(226, 82%, 69%);
     }
-    &.primary {
-
-         background: hsl(120, 81%, 68%);
-         color: black;
+    &.secondary {
+        background: hsl(120, 81%, 68%);
+        outline: 1px solid hsl(120, 86%, 65%);
+        box-shadow: 1px 1px 2px hsl(120, 83%, 84%);
+        color: black;
+        &:hover {
+          box-shadow: 2px 2px 2px hsl(120, 32%, 55%);
+        }
         &:active {
-            background: hsl(120, 85%, 70%);
+          background: hsl(120, 85%, 70%);
+          box-shadow: inset 1px 1px 3px #333;
         }
     }
     &.warning {
         background: hsl(0, 80%, 68%);
+        outline: 1px solid hsl(0, 72%, 74%);
+        box-shadow: 1px 1px 2px hsl(0, 0%, 75%);
         &:active {
             background: hsl(0, 85%, 70%);
         }
